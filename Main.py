@@ -17,10 +17,10 @@ if file:
 
     dept_df = pd.DataFrame({
       'Department' : dept,
-      'Count of students (in a given Dept.)' : list(dept_counts)
+      'Count of student' : list(dept_counts)
     })
 
-    st.bar_chart(dept_df, x='Department', y='Count of students (in a given Dept.)')
+    st.bar_chart(dept_df, x='Department', y='Count of students')
 
   # with col2:
   #   #Attended or not
