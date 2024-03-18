@@ -9,19 +9,21 @@ if file:
   #Department wise Distribution
   data = pd.read_csv(file)
 
-  years = ['All'] + list(data['Year'].value_counts().index)
-
-  year_select = st.selectbox('Year', years, index=0)
-
-  if year_select:
-    filtered_data = pd.DataFrame()
-
-    if year_select == 'All':
-      filtered_data = data
-    else:
-      filtered_data = data[data.Year == year_select]
+  with st.sidebar:
+    years = ['All'] + list(data['Year'].value_counts().index)
+  
+    year_select = st.selectbox('Year', years, index=0)
+  
+    if year_select:
+      filtered_data = pd.DataFrame()
+  
+      if year_select == 'All':
+        st.session_state.filtered_data = data
+      else:
+        st.session_state.filtered_data = data[data.Year == year_select]
 
   col1, gap1, col2, gap2, col3 = st.columns([1, 0.3, 1, 0.2, 1])
+  filtered_data = st.session_state.filtered_data
 
   with col1:
     dept_counts = filtered_data['Department'].value_counts()
