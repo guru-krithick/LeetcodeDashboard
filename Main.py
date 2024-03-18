@@ -20,7 +20,7 @@ if file:
       'Count' : dept_counts
     })
 
-    st.bar_chart(dept_df, x='Department', y='Count of students')
+    st.bar_chart(dept_df, x='Department', y='Count')
 
   # with col2:
   #   #Attended or not
