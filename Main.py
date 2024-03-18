@@ -9,7 +9,7 @@ if file:
   #Department wise Distribution
   data = pd.read_csv(file)
 
-  col1, gap1, col2, gap2, col3 = st.columns([1, 0.5, 1, 0.5, 1])
+  col1, gap1, col2, gap2, col3 = st.columns([1, 0.3, 1, 0.2, 1])
 
   with col1:
     dept_counts = data['Department'].value_counts()
