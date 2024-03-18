@@ -22,20 +22,20 @@ if file:
 
     st.bar_chart(dept_df, x='Department', y='Count')
 
-  # with col2:
-  #   #Attended or not
-  #   ranks = data['Rank']
-  #   zero = 0
+  with col2:
+    #Attended or not
+    ranks = data['Rank']
+    zero = 0
 
-  #   for rank in ranks:
-  #     if rank == 0:
-  #       zero += 1
+    for rank in ranks:
+      if rank == 0:
+        zero += 1
 
-  #   nonzero = len(ranks) - zero
+    nonzero = len(ranks) - zero
 
-  #   presence_df = pd.DataFrame({
-  #     'Presence' : ['Present', 'Absent'],
-  #     'Count' : [nonzero, zero]
-  #   })
+    presence_df = pd.DataFrame({
+      'Presence' : ['Present', 'Absent'],
+      'Count' : [nonzero, zero]
+    })
 
-  #   st.bar_chart(presence_df, x='Presence', y='Count')
+    st.bar_chart(presence_df, x='Presence', y='Count')
