@@ -38,4 +38,4 @@ if file:
       'Count' : [nonzero, zero]
     })
 
-    st.bar_chart(presence_df, x='Presence', y='Count)
+    st.bar_chart(presence_df, x='Presence', y='Count')
