@@ -16,7 +16,7 @@ if file:
   if year_select:
     filtered_data = pd.DataFrame()
 
-    if year_select = 'All':
+    if year_select == 'All':
       filtered_data = data
     else:
       filtered_data = data[data.Year == year_select]
