@@ -33,7 +33,7 @@ if file:
 
     nonzero = len(ranks) - zero
 
-    presence_df = pd.DataFrane({
+    presence_df = pd.DataFrame({
       'Presence' : ['Present', 'Absent'],
       'Count' : [nonzero, zero]
     })
