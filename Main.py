@@ -17,7 +17,7 @@ if file:
 
     dept_df = pd.DataFrame({
       'Department' : dept,
-      'Count of student' : list(dept_counts)
+      'Count' : dept_counts
     })
 
     st.bar_chart(dept_df, x='Department', y='Count of students')
