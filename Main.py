@@ -11,7 +11,7 @@ if file:
   col1, col2 = st.columns(2)
 
   with col1:
-    dept_counts = list(data['Department'].value_counts())
+    dept_counts = data['Department'].value_counts()
     dept = list(dept_counts.index)
 
     dept_df = pd.DataFrame({
