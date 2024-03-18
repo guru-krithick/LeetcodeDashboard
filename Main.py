@@ -9,7 +9,7 @@ if file:
   #Department wise Distribution
   data = pd.read_csv(file)
 
-  col1, col2, col3 = st.columns([1, 1, 1])
+  col1, col2, col3 = st.columns([1, 3, 1])
 
   with col1:
     dept_counts = data['Department'].value_counts()
@@ -22,7 +22,7 @@ if file:
 
     st.bar_chart(dept_df, x='Department', y='Count')
 
-  with col2:
+  with col3:
     #Attended or not
     ranks = data['Rank']
     zero = 0
